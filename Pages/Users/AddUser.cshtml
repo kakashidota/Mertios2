@@ -1,0 +1,44 @@
+﻿@page
+@model NiceLIA.Pages.Users.AddUserModel
+@{
+}
+
+<form method="post">
+    <h1>Skapa en användare</h1>
+
+    <div class="mb-3">
+        <label class="form-label">Namn</label>
+        <input type="text" class="form-control" asp-for="AddUserRequest.Name" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="AddUserRequest.Email" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Skola</label>
+        <input type="text" class="form-control" asp-for="AddUserRequest.School" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Utbildning</label>
+        <input type="text" class="form-control" asp-for="AddUserRequest.Education" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Stad</label>
+        <input class="form-control" type="text" asp-for="AddUserRequest.Location" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">TelefonNummer</label>
+        <input class="form-control" type="text" asp-for="AddUserRequest.PhoneNr" />
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-success">Lägg till</button>
+    </div>
+
+
+</form>
