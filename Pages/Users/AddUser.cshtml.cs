@@ -22,7 +22,7 @@ namespace NiceLIA.Pages.Users
         {
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             var userDomainModel = new User
             {
@@ -36,6 +36,8 @@ namespace NiceLIA.Pages.Users
 
             dbcontext._Users.Add(userDomainModel);
             dbcontext.SaveChanges();
+
+            return RedirectToPage("/Users/Listusers");
         }
     }
 }

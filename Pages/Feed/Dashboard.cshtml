@@ -1,0 +1,75 @@
+﻿@page
+@model NiceLIA.Pages.Feed.DashboardModel
+@{
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Col 1</th>
+                        <th>Col 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>Data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-8 mx-auto">
+            <div class="row mt-5">
+                <div class="col-sm-9">
+                    <form method="post">
+                        <div>
+                            <textarea class="form-control" name="postContent" rows="3" placeholder="Dela med dig av dig dag eller något.."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Flöde</div>
+                <!--Flödet går här foreach message in firebase storage-->
+                @foreach (var post in Model.Posts)
+                {
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="https://via.placeholder.com/150x150" class="rounded-circle mx-auto d-block mt-3" />
+                                <h4 class="text-center mt-3">John Doe</h4>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card mt-5">
+                                    <div class="card-body">
+                                        <h5 class="card-title">John doe delade med sig</h5>
+                                        <p class="card-text">
+                                            @post["content"]
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            
+        </div>
+        <div class="col-2">
+            <div class="card">
+                <div class="card-header">Statistik</div>
+                <div class="card-body">
+                    <!--Statistik content-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

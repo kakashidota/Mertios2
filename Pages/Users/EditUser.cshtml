@@ -1,0 +1,50 @@
+﻿@page "{id:Guid}"
+@model NiceLIA.Pages.Users.EditUserModel
+@{
+}
+
+<form method="post">
+    <h1>Editera användare</h1>
+
+    <div>
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="_EditUser.Id" readonly />
+    </div>
+
+    <div>
+        <label class="form-label">Namn</label>
+        <input type="text" class="form-control" asp-for="_EditUser.Name" />
+    </div>
+
+    <div>
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="_EditUser.Email" />
+    </div>
+
+    <div>
+        <label class="form-label">Skola</label>
+        <input type="text" class="form-control" asp-for="_EditUser.School" />
+    </div>
+
+    <div>
+        <label class="form-label">Utbildning</label>
+        <input type="text" class="form-control" asp-for="_EditUser.Education" />
+    </div>
+
+    <div>
+        <label class="form-label">Stad</label>
+        <input type="text" class="form-control" asp-for="_EditUser.Location" />
+    </div>
+
+    <div>
+        <label class="form-label">Telefon Nummer</label>
+        <input type="text" class="form-control" asp-for="_EditUser.PhoneNr" />
+    </div>
+
+    <div class="mb-3 d-flex justify-content-between">
+        <button type="submit" class="btn btn-success" asp-page-handler="Update">Uppdatera</button>
+        <button type="submit" class="btn btn-danger" asp-page-handler="Delete">Ta bort</button>
+    </div>
+
+
+</form>
